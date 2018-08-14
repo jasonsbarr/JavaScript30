@@ -9,6 +9,27 @@ body,html {
   font-family: sans-serif;
 }
 
+.page-header {
+  background: white;
+  font-size: 20px;
+  font-weight: 500;
+  height: 40px;
+  padding: 10px;
+}
+
+.page-header h3 {
+  margin: 0;
+}
+
+.page-header a {
+  text-decoration: none;
+  color: #333;
+}
+
+.page-header a:hover, a:active {
+  text-decoration: underline;
+}
+
 .keys {
   display: flex;
   flex: 1;
