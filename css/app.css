@@ -7,6 +7,10 @@ h6 {
   font-variant: petite-caps;
 }
 
+.page-header {
+  margin-bottom: .8rem;
+}
+
 .fa-ul li:last-child {
   margin-bottom: 0;
 }
