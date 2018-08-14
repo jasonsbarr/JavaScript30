@@ -1,0 +1,23 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-variant: petite-caps;
+}
+
+.fa-ul li:last-child {
+  margin-bottom: 0;
+}
+
+.fa-ul li {
+  margin-bottom: .5rem;
+}
+
+.fa-ul .fa-li + a {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-left: .6rem;
+  vertical-align: -25%;
+}
