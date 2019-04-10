@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Console Tricks!</title>
+</head>
+<body>
+
+  <p onClick="makeGreen()">×BREAK×DOWN×</p>
+
+  <script>
+    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+
+    function makeGreen() {
+      const p = document.querySelector('p');
+      p.style.color = '#BADA55';
+      p.style.fontSize = '50px';
+    }
+
+    // Regular
+    console.log('Hello');
+
+    // Interpolated
+    console.log('Hello, I am an %s string!', 'interpolated')
+
+    // Styled
+    console.log('%c I am some amazing text!', 'font-size: 2rem; font-weight: bold;')
+
+    // warning!
+    console.warn('Uhhhh....');
+
+    // Error :|
+    console.error('DANGER WILL ROBINSON');
+
+    // Info
+    console.info('You probably peaked in high school.');
+
+    // Testing
+    console.assert(1 === 1, 'True, so won\'t run');
+    console.assert(1 === 3, 'Wrong! 1 does not === 3');
+
+    // clearing
+    // console.clear(); // can also just use CTRL + L
+
+    // Viewing DOM Elements
+    const p = document.querySelector('p');
+    console.log(p);
+    console.dir(p);
+
+    // Grouping together
+    dogs.forEach(dog => {
+      console.group(`${dog.name}`);
+        console.log(`This is ${dog.name}`)
+      console.groupEnd(`${dog.name}`);
+    });
+
+    dogs.forEach(dog => {
+      console.groupCollapsed(`${dog.name}`);
+        console.log(`
+          ${dog.name} is
+          ${dog.age} years old
+        `);
+      console.groupEnd(`${dog.name}`);
+    });
+
+    console.table(dogs);
+
+    // counting
+    console.count('Hello');
+    console.count('Hello');
+    console.count('Bob');
+    console.count('Hello');
+    console.count('Hello');
+    console.count('Bob');
+    console.count('Hello');
+
+    // timing
+    console.time('fetching...');
+    fetch('https://api.github.com/users/jasonsbarr')
+      .then(data => data.json())
+      .then(data => console.timeEnd('fetching...'));
+
+  </script>
+</body>
+</html>
